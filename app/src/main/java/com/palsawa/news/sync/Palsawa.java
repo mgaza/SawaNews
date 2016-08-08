@@ -16,7 +16,7 @@ public class Palsawa extends Application {
         BeBound.init(this, new BeAppConfig() {
             @Override
             public String getBeAppKey() {
-                return "HCOIJ7exsFdBnHUqhz6Z2xJclQSg/EJb";
+                return "HyOPLbaysFdBnHUqhz6Z2xJclQTyoxlBldnalIoLTGMiT6PmVmTnylc=";
             }
 
             @Override
