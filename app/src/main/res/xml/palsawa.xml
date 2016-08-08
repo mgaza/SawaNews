@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" standalone="yes"?>
 <be-app
     name="SawaNews"
+    apk="com.palsawa.news"
     remote="true"
-    version="2"> <!-- ( remote = true ) because of development -->
+    version="1"> <!-- ( remote = true ) because of development -->
     <server
         Auth="1234"
         domain="www.palsawa.com"
