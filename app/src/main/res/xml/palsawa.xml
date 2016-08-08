@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<be-app
+    name="SawaNews"
+    remote="true"
+    version="2"> <!-- ( remote = true ) because of development -->
+    <server
+        Auth="1234"
+        domain="www.palsawa.com"
+        https="false"
+        uri="bebound" />
+
+    <!-- Errors -->
+    <errors>
+        <error name="Err_login" />
+    </errors>
+
+    <server_operations>
+        <!-- Fetch 9 news from Palsawa -->
+        <operation name="fetch_news_by_web">
+            <request>
+                <param
+                    name="cat"
+                    max="124"
+                    min="0"
+                    type="int" />
+                <param
+                    name="page"
+                    max="20"
+                    min="1"
+                    type="int" />
+            </request>
+            <response>
+                <param
+                    name="news"
+                    max="31"
+                    min="0"
+                    type="array">
+                    <param
+                        name="id"
+                        max="16777215"
+                        min="0"
+                        type="int" />
+                    <param
+                        name="title"
+                        max_len="150"
+                        min_len="0"
+                        type="string" />
+                    <param
+                        name="img"
+                        max_len="80"
+                        min_len="0"
+                        type="string" />
+                    <!-- We send the date as a string not a timestamp -->
+                    <param
+                        name="date"
+                        max_len="20"
+                        min_len="0"
+                        type="string" />
+                </param>
+            </response>
+        </operation>
+        <!-- Fetch 5 news from Palsawa -->
+        <operation name="fetch_news_by_sms">
+            <request>
+                <param
+                    name="cat"
+                    max="124"
+                    min="0"
+                    type="int" />
+                <param
+                    name="page"
+                    max="20"
+                    min="1"
+                    type="int" />
+            </request>
+            <response>
+                <param
+                    name="news"
+                    max="31"
+                    min="0"
+                    type="array">
+                    <param
+                        name="id"
+                        max="16777215"
+                        min="0"
+                        type="int" />
+                    <param
+                        name="title"
+                        max_len="150"
+                        min_len="0"
+                        type="string" />
+                    <param
+                        name="img"
+                        max_len="80"
+                        min_len="0"
+                        type="string" />
+                    <!-- We send the date as a string not a timestamp -->
+                    <param
+                        name="date"
+                        max_len="20"
+                        min_len="0"
+                        type="string" />
+                </param>
+            </response>
+        </operation>
+        <!-- Fetch Article from Palsawa -->
+        <operation name="fetch_article_by_web">
+            <request>
+                <param
+                    name="id"
+                    max="16777215"
+                    min="0"
+                    type="int" />
+            </request>
+            <response>
+                <param
+                    name="article"
+                    max_len="16777215"
+                    min_len="0"
+                    type="string" />
+            </response>
+        </operation>
+        <!-- Fetch Article from Palsawa using SMS -->
+        <operation name="fetch_article_by_sms">
+            <request>
+                <param
+                    name="id"
+                    max="16777215"
+                    min="0"
+                    type="int" />
+                <param
+                    name="part"
+                    max="100"
+                    min="0"
+                    type="int" />
+            </request>
+            <response>
+                <param
+                    name="article"
+                    max_len="16777215"
+                    min_len="0"
+                    type="string" />
+            </response>
+        </operation>
+    </server_operations>
+
+</be-app>

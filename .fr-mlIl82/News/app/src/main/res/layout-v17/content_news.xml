@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/colorContentBackground"
+    android:orientation="vertical" android:paddingTop="5dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.palsawa.news.NewsActivity" tools:showIn="@layout/app_bar_news">
+    <LinearLayout android:id="@+id/news_list_full_progress_bar" android:layout_width="match_parent"
+        android:layout_height="48dp" android:layout_marginBottom="5dp"
+        android:background="@color/colorContentBackground" android:gravity="center"
+        android:layoutDirection="rtl" android:orientation="horizontal" android:paddingBottom="12dp"
+        android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingTop="16dp">
+        <com.rey.material.widget.ProgressView android:layout_width="20dp"
+            android:layout_height="20dp" android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" app:cpd_strokeSize="2dp" app:pv_autostart="true"
+            app:pv_circular="true" app:pv_progressMode="indeterminate"
+            app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+        <TextView android:layout_width="wrap_content" android:layout_height="match_parent"
+            android:text="@string/loading" android:textSize="12sp" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/swiperefresh"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:overScrollMode="never">
+        <ListView android:id="@+id/news_list" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:clipToPadding="false"
+            android:overScrollMode="never" tools:listitem="@layout/news_list_item"></ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

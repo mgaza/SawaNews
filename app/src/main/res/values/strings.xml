@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Sawa News</string>
+    <string name="settings_title">الإعدادات</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">الإعدادات</string>
+    <string name="action_about">عن التطبيق</string>
+    <string name="title_activity_news">Sawa News</string>
+
+    <!--- App Messages -->
+    <string name="request_failed">خطأ: لم يتم استلام أي بيانات ، يرجى المحاولة مرة أخرى</string>
+    <string name="loading"></string>
+
+    <!-- Place holders -->
+    <string name="article_title">تماس كهربائي يتسبب في احتراق منزل في القدس</string>
+    <string name="article_date">آخر تعديل: 26-06-2016	الساعه: 11:50</string>
+    <string name="empty_list">يتم الآن تحميل الأخبار</string>
+
+    <!-- Settings -->
+    <string name="connectionSetting">Wataniya Connect</string>
+    <string name="connectionSettingDesc">جلب البيانات بدون اتصال بالانترنت</string>
+    <string name="savingSetting">الحفظ التلقائي للأخبار لمدة:</string>
+    <string name="saveForAweek">أسبوع</string>
+    <string name="saveFor2Weeks">أسبوعين</string>
+    <string name="saveFor1Month">شهر</string>
+
+    <!-- about -->
+    <string name="appVersion">Sawa News V 1.0.0</string>
+    <string name="appDeveloper">Developed By: Mohammed AbuIriban </string>
+    <string name="appDesigned">Designed By: Rajab Allouh</string>
+    <string name="appSite">More Info Visit: www.fireXweb.com</string>
+
+
+</resources>
